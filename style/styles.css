@@ -1,0 +1,434 @@
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+p {
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+#hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: background 1s ease;
+}
+
+.overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.overlay h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    text-shadow: 2px 2px 10px black;
+}
+
+.overlay p {
+    font-size: 24px;
+}
+
+.section {
+    padding: 10px 20px;
+    text-align: center;
+    
+    shape-margin: 2%;
+    
+}
+
+.blue {
+    background: #B7E3FD;
+    color: white;
+}
+
+.white {
+    background: white;
+    
+}
+
+.timeline {
+    border-left: 3px solid #000;
+    padding-left: 20px;
+    color: #505050;
+}
+
+.event {
+    margin: 20px 0;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    border-radius: 4%;
+}
+
+.carousel img {
+    width: 80%;
+    animation: slide 20s infinite;
+}
+
+@keyframes slide {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(-100%);}
+    50% {transform: translateX(-200%);}
+    75% {transform: translateX(-300%);}
+}
+
+.btn {
+    background: #B7E3FD;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.music-control button {
+    background: rgba(123, 200, 255, 0.8);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section::after {
+    content: "";
+    display: block;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), inherit);
+}
+
+.blue::after {
+    background: linear-gradient(to bottom, rgba(10,61,98,0), #B7E3FD);
+}
+
+/* 📱 RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .overlay h1 {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .overlay p {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 40px 15px;
+    }
+
+    iframe {
+        height: 250px;
+    }
+
+    .carousel img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .timeline {
+        border-left: 2px solid #B7E3FD;
+        color: #505050;
+    }
+
+    .btn {
+        width: 80%;
+        display: inline-block;
+    }
+}
+
+/* 🔝 BOTÓN VOLVER ARRIBA */
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(10, 61, 98, 0.85);
+    color: white;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.4s ease;
+
+    z-index: 999;
+}
+
+/* Cuando aparece */
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hover elegante */
+#backToTop:hover {
+    transform: translateY(-5px) scale(1.08);
+    background: #0a3d62;
+    box-shadow: 0 0 15px rgba(10,61,98,0.6);
+}
+
+.circulo {
+    width: 110px;
+    height: 110px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+
+    box-shadow: 0 0 25px rgba(0,0,0,0.15);
+}
+
+/* Imagen interna */
+.circulo img {
+    width: 170%;
+    height: 170%;
+
+    object-fit: contain;
+}
+
+.family-slider {
+
+    width: 100%;
+    max-width: 500px;
+
+    height: 220px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    position: relative;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.slider-track {
+
+    display: flex;
+
+    width: 100%;
+
+    animation: slideFamily 6s infinite;
+}
+
+.slide {
+
+    width: 100%;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    color: white;
+}
+
+.slide h3 {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.slide p {
+
+    font-size: 20px;
+
+    margin: 5px 0;
+}
+
+@keyframes slideFamily {
+
+    0% {
+        transform: translateX(0%);
+    }
+
+    40% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    90% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+.family-slider {
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.event-card {
+
+    width: 90%;
+    max-width: 420px;
+
+    margin: 40px auto;
+
+    background: rgba(255,255,255,0.92);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.12);
+
+    backdrop-filter: blur(6px);
+
+    transition: all 0.4s ease;
+}
+
+/* Hover elegante */
+.event-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.18);
+}
+
+.event-content {
+
+    padding: 28px;
+}
+
+.event-card h2 {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 42px;
+
+    color: #3d3d3d;
+
+    margin-bottom: 20px;
+}
+
+.event-card p {
+
+    color: #333;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 10px;
+}
+
+.event-card img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    .event-card {
+
+        width: 92%;
+    }
+
+    .event-card h2 {
+
+        font-size: 34px;
+    }
+
+    .event-card p {
+
+        font-size: 18px;
+    }
+
+    .event-card img {
+
+        height: 240px;
+    }
+}
