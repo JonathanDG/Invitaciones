@@ -40,7 +40,7 @@ window.addEventListener("scroll", () => {
     const scroll = window.scrollY;
     const half = document.body.scrollHeight / 2;
 
-    if (scroll > half*.68) {
+    if (scroll > half*.633) {
         document.body.style.backgroundImage = "url('images/6.jpeg')";
     } else {
         document.body.style.backgroundImage = "url('images/1.jpeg')";
