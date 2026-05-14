@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>XV Años Fernanda</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FUENTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <!-- MÚSICA -->
+    <audio id="music" loop>
+        <source src="source/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- BOTÓN MÚSICA -->
+    <div class="music-control">
+        <button id="musicBtn">
+            <i class="bi bi-volume-up-fill"></i>
+        </button>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+
+        <div class="hero-overlay">
+
+            <div class="hero-content">
+
+                <p class="hero-subtitle">Mis XV años</p>
+
+                <h1>Fernanda</h1>
+
+                <span>24 Julio 2026</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BIENVENIDA -->
+    <section class="section glass-section">
+
+        <div class="glass-card">
+
+            <h2 class="title-script">Fernanda Bañuelos</h2>
+
+            <img src="images/separador.webp" class="separator">
+
+            <p class="message">
+                “Con la bendición de Dios y el amor de mi familia,
+                hoy dejo atrás mis sueños de niña para comenzar
+                a escribir una nueva historia llena de ilusiones.”
+            </p>
+
+            <!-- COUNTDOWN -->
+            <div class="countdown-container">
+
+                <div class="count-box">
+                    <span id="days">00</span>
+                    <small>Días</small>
+                </div>
+
+                <div class="count-box">
+                    <span id="hours">00</span>
+                    <small>Horas</small>
+                </div>
+
+                <div class="count-box">
+                    <span id="minutes">00</span>
+                    <small>Minutos</small>
+                </div>
+
+                <div class="count-box">
+                    <span id="seconds">00</span>
+                    <small>Segundos</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VESTIMENTA -->
+    <section class="section">
+
+        <div class="glass-card">
+
+            <img src="images/vestimenta.png" class="icon-image float">
+
+            <h2 class="title-script dark">
+                Código de Vestimenta
+            </h2>
+
+            <img src="images/separador.webp" class="separator">
+
+            <p>Formal</p>
+
+            <p>Mujeres: Vestido largo</p>
+
+            <p>Hombres: Traje completo</p>
+
+            <p class="highlight">
+                Gama azul reservada para la quinceañera
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- MENSAJE -->
+    <section class="section transparent-section">
+
+        <p class="light-text">
+            Acompáñame a celebrar este momento tan especial
+            en mi vida donde cada sonrisa, cada abrazo y cada
+            instante serán recuerdos que guardaré por siempre
+            en mi corazón.
+        </p>
+
+    </section>
+
+    <!-- ITINERARIO -->
+    <section class="section glass-section">
+
+        <div class="glass-card">
+
+            <h2 class="title-script dark">
+                Itinerario
+            </h2>
+
+            <img src="images/separador.webp" class="separator">
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <span>8:30 PM</span>
+                    <p>Recepción</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span>9:00 PM</span>
+                    <p>Vals</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span>9:30 PM</span>
+                    <p>Cena</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span>10:30 PM</span>
+                    <p>Baile</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span>2:00 AM</span>
+                    <p>Fin del evento</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PADRES -->
+    <section class="section">
+
+        <h2 class="title-script light">
+            Padres y Padrinos
+        </h2>
+
+        <div class="family-slider">
+
+            <div class="slider-track">
+
+                <div class="slide">
+
+                    <h3>Gabriela Arellano</h3>
+
+                    <h4>&</h4>
+
+                    <h3>Felipe Bañuelos</h3>
+
+                    <p>Papás</p>
+
+                </div>
+
+                <div class="slide">
+
+                    <h3>Sendy Ovalle</h3>
+
+                    <h4>&</h4>
+
+                    <h3>Jaime Bañuelos</h3>
+
+                    <p>Padrinos</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- UBICACIONES -->
+    <section class="section glass-section">
+
+        <!-- CEREMONIA -->
+
+        <div class="event-card">
+
+            <div class="event-content">
+
+                <h2 class="title-script dark">
+                    Ceremonia Religiosa
+                </h2>
+
+                <p>
+                    <strong>Lugar:</strong>
+                    Parroquia San Juan Bosco
+                </p>
+
+                <p>
+                    <strong>Domicilio:</strong>
+                    Calle Industria 1512,
+                    Guadalajara.
+                </p>
+
+            </div>
+
+            <img src="images/iglesia.png">
+
+        </div>
+
+        <iframe
+            src="https://maps.google.com/maps?q=Parroquia%20San%20Juan%20Bosco%20Guadalajara&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+
+        <!-- RECEPCIÓN -->
+
+        <div class="event-card">
+
+            <div class="event-content">
+
+                <h2 class="title-script dark">
+                    Recepción
+                </h2>
+
+                <p>
+                    <strong>Lugar:</strong>
+                    Salón Real de Las Palmas
+                </p>
+
+                <p>
+                    <strong>Domicilio:</strong>
+                    Guanabana 4096,
+                    San Pedro Tlaquepaque.
+                </p>
+
+            </div>
+
+            <img src="images/terraza2.jpeg">
+
+        </div>
+
+        <iframe
+            src="https://maps.google.com/maps?q=Real%20de%20Las%20Palmas%20Tlaquepaque&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section white-section">
+
+        <h2 class="title-script dark">
+            Galería
+        </h2>
+
+        <div class="carousel">
+
+            <div class="carousel-track">
+
+                <img src="images/1.jpeg">
+                <img src="images/2.jpeg">
+                <img src="images/3.jpeg">
+                <img src="images/4.jpeg">
+
+                <!-- Duplicadas -->
+
+                <img src="images/1.jpeg">
+                <img src="images/2.jpeg">
+                <img src="images/3.jpeg">
+                <img src="images/4.jpeg">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- REGALOS -->
+    <section class="section transparent-section">
+
+        <h2 class="title-script light">
+            Regalos
+        </h2>
+
+        <p class="light-text">
+            Tu presencia es mi mejor regalo.
+            Sin embargo, si deseas hacerme
+            un detalle, puedes elegir:
+        </p>
+
+        <p class="light-text">
+            Lluvia de sobres o regalo
+            a tu elección.
+        </p>
+
+    </section>
+
+    <!-- CONFIRMACIÓN -->
+    <section class="section glass-section">
+
+        <div class="glass-card">
+
+            <h2 class="title-script dark">
+                Confirmación
+            </h2>
+
+            <p>
+                Confirma tu asistencia antes
+                del 1 de Julio.
+            </p>
+
+            <a class="btn"
+                href="https://wa.me/525642420956?text=Confirmo%20mi%20asistencia%20a%20los%20XV%20años.%20Mi%20nombre%20es:"
+                target="_blank">
+
+                <i class="bi bi-whatsapp"></i>
+
+                Confirmar asistencia
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- BOTÓN ARRIBA -->
+    <button id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © Nuvantis 2026
+        </p>
+
+        <p>
+            Desarrollado por Jonathan Durón
+        </p>
+
+        <div class="socials">
+
+            <a href="https://wa.me/525642420956">
+                WhatsApp
+            </a>
+
+            <a href="https://www.linkedin.com">
+                LinkedIn
+            </a>
+
+            <a href="https://facebook.com">
+                Facebook
+            </a>
+
+        </div>
+
+    </footer>
+
+    <script src="scripts/apps.js"></script>
+
+</body>
+
+</html>
