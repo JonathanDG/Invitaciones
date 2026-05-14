@@ -15,6 +15,29 @@ body {
 
     font-family: 'Montserrat', sans-serif;
 
+    overflow-x: hidden;
+
+    color: white;
+
+    scroll-behavior: smooth;
+
+    position: relative;
+
+    background: #000;
+}
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
     background:
         linear-gradient(
             rgba(0,0,0,0.45),
@@ -24,13 +47,23 @@ body {
 
     background-size: cover;
 
-    background-attachment: fixed;
+    background-position: center;
+
+    z-index: -2;
+
+    will-change: transform;
+}
+
+html, body {
+
+    width: 100%;
 
     overflow-x: hidden;
+}
 
-    color: white;
+* {
 
-    scroll-behavior: smooth;
+    max-width: 100%;
 }
 
 p {
@@ -398,7 +431,7 @@ iframe {
 
     width: max-content;
 
-    animation: galleryScroll 30s linear infinite;
+    animation: galleryScroll 15s linear infinite;
 }
 
 .carousel img {
@@ -422,7 +455,40 @@ iframe {
         transform: translateX(-50%);
     }
 }
+/*
 
+.carousel {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.carousel-track {
+
+    display: flex;
+
+    gap: 20px;
+
+    animation: galleryScroll 30s linear infinite;
+
+    width: fit-content;
+}
+
+.carousel img {
+
+    width: 220px;
+
+    min-width: 220px;
+
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+}*/
 /* BUTTON */
 
 .btn {
