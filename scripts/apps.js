@@ -98,7 +98,8 @@ const music =
 const musicBtn =
     document.getElementById("musicBtn");
 
-let playing = false;
+let playing = true;
+music.play();
 
 window.addEventListener("click", () => {
 
