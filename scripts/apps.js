@@ -92,45 +92,8 @@ sections.forEach(section => {
 
 // MUSIC
 
-const music =
-    document.getElementById("music");
 
-const musicBtn =
-    document.getElementById("musicBtn");
 
-let playing = true;
-music.play();
-
-window.addEventListener("click", () => {
-
-    if (!playing) {
-
-        music.play();
-
-        playing = true;
-    }
-
-}, { once: true });
-
-musicBtn.addEventListener("click", () => {
-
-    if (playing) {
-
-        music.pause();
-
-        musicBtn.innerHTML =
-            '<i class="bi bi-volume-mute-fill"></i>';
-
-    } else {
-
-        music.play();
-
-        musicBtn.innerHTML =
-            '<i class="bi bi-volume-up-fill"></i>';
-    }
-
-    playing = !playing;
-});
 
 // BACK TO TOP
 
@@ -159,4 +122,61 @@ backToTop.addEventListener("click", () => {
         behavior: "smooth"
     });
 
+});
+
+// =========================
+// WELCOME MODAL + MUSIC
+// =========================
+
+const welcomeModal =
+    document.getElementById("welcomeModal");
+
+const startExperience =
+    document.getElementById("startExperience");
+
+const music =
+    document.getElementById("music");
+
+const musicBtn =
+    document.getElementById("musicBtn");
+
+let playing = false;
+
+startExperience.addEventListener("click", () => {
+
+    // reproducir música
+
+    music.play();
+
+    playing = true;
+
+    // cambiar icono
+
+    musicBtn.innerHTML =
+        '<i class="bi bi-volume-up-fill"></i>';
+
+    // ocultar modal
+
+    welcomeModal.classList.add("hide");
+
+});
+
+musicBtn.addEventListener("click", () => {
+
+    if (playing) {
+
+        music.pause();
+
+        musicBtn.innerHTML =
+            '<i class="bi bi-volume-mute-fill"></i>';
+
+    } else {
+
+        music.play();
+
+        musicBtn.innerHTML =
+            '<i class="bi bi-volume-up-fill"></i>';
+    }
+
+    playing = !playing;
 });
