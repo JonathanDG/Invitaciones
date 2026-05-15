@@ -288,11 +288,11 @@ p {
 
 .family-slider {
 
-    width: 90%;
+    width: 100%;
 
     max-width: 500px;
 
-    height: 220px;
+    height: 250px;
 
     margin: auto;
 
@@ -311,8 +311,9 @@ p {
 
     width: 200%;
 
-    animation: slideFamily 6s infinite;
+    animation: slideFamily 8s infinite;
 }
+
 
 .slide {
 
@@ -327,18 +328,19 @@ p {
     justify-content: center;
 
     align-items: center;
+    
 }
 
 .slide h3 {
 
     font-family: 'Great Vibes', cursive;
 
-    font-size: 42px;
+    font-size: 30px;
 }
 
 .slide h4 {
 
-    font-size: 26px;
+    font-size: 20px;
 
     margin: -10px 0;
 }
@@ -350,7 +352,7 @@ p {
     }
 
     50%,90% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 
     100% {
@@ -427,11 +429,11 @@ iframe {
 
     display: flex;
 
-    gap: 20px;
+    gap: 30px;
 
     width: max-content;
 
-    animation: galleryScroll 15s linear infinite;
+    animation: galleryScroll 25s linear infinite;
 }
 
 .carousel img {
