@@ -39,10 +39,8 @@ body::before {
     height: 100%;
 
     background:
-        linear-gradient(
-            rgba(0,0,0,0.45),
-            rgba(0,0,0,0.45)
-        ),
+        linear-gradient(rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)),
         url('../images/6.jpeg');
 
     background-size: cover;
@@ -54,7 +52,8 @@ body::before {
     will-change: transform;
 }
 
-html, body {
+html,
+body {
 
     width: 100%;
 
@@ -98,10 +97,8 @@ p {
     inset: 0;
 
     background:
-        linear-gradient(
-            rgba(0,0,0,0.2),
-            rgba(0,0,0,0.6)
-        );
+        linear-gradient(rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.6));
 
     display: flex;
 
@@ -121,8 +118,8 @@ p {
     margin: 0;
 
     text-shadow:
-        0 0 25px rgba(255,255,255,.3),
-        0 8px 20px rgba(0,0,0,.5);
+        0 0 25px rgba(255, 255, 255, .3),
+        0 8px 20px rgba(0, 0, 0, .5);
 }
 
 .hero-subtitle {
@@ -169,7 +166,7 @@ p {
 
     margin: auto;
 
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
 
     backdrop-filter: blur(12px);
 
@@ -178,9 +175,9 @@ p {
     padding: 50px 35px;
 
     box-shadow:
-        0 10px 40px rgba(0,0,0,0.2);
+        0 10px 40px rgba(0, 0, 0, 0.2);
 
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* TITLES */
@@ -301,7 +298,7 @@ p {
 
     border-radius: 30px;
 
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
 
     backdrop-filter: blur(8px);
 }
@@ -329,7 +326,7 @@ p {
     justify-content: center;
 
     align-items: center;
-    
+
 }
 
 .slide h3 {
@@ -348,11 +345,13 @@ p {
 
 @keyframes slideFamily {
 
-    0%,40% {
+    0%,
+    40% {
         transform: translateX(0);
     }
 
-    50%,90% {
+    50%,
+    90% {
         transform: translateX(-100%);
     }
 
@@ -375,10 +374,10 @@ p {
 
     border-radius: 30px;
 
-    background: rgba(255,255,255,0.92);
+    background: rgba(255, 255, 255, 0.92);
 
     box-shadow:
-        0 15px 35px rgba(0,0,0,0.18);
+        0 15px 35px rgba(0, 0, 0, 0.18);
 }
 
 .event-content {
@@ -438,7 +437,7 @@ iframe {
     animation: galleryScroll 25s linear infinite;
 }*/
 
-h2{
+h2 {
     text-align: center;
 }
 
@@ -453,43 +452,13 @@ h2{
     border-radius: 24px;
 }*/
 
-.carousel {
-    display: flex;
-    overflow: hidden;
-    border-radius: 4%;
-}
+/* =========================
+   GALERÍA
+========================= */
 
-.carousel img {
-    width: 100%;
-    animation: slide 20s infinite;
-}
-
-.carousel img {
-        width: 200%;
-        object-fit: cover;
-    }
-
-.carousel-track {
-
-    display: flex;
-
-    gap: 10px;
-
-    width: 100%;
-
-    animation: galleryScroll 5s linear infinite;
-}
-@keyframes galleryScroll {
-
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-/*
+/* =========================
+   CARRUSEL INFINITO
+========================= */
 
 .carousel {
 
@@ -498,17 +467,22 @@ h2{
     overflow: hidden;
 
     position: relative;
+
+    margin-top: 30px;
 }
 
 .carousel-track {
 
     display: flex;
 
-    gap: 20px;
+    align-items: center;
 
-    animation: galleryScroll 30s linear infinite;
+    gap: 15px;
 
     width: fit-content;
+
+    animation:
+        infiniteScroll 50s linear infinite;
 }
 
 .carousel img {
@@ -522,7 +496,42 @@ h2{
     object-fit: cover;
 
     border-radius: 24px;
-}*/
+
+    flex-shrink: 0;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* LOOP REAL */
+
+@keyframes infiniteScroll {
+
+    from {
+
+        transform: translateX(0);
+    }
+
+    to {
+
+        transform: translateX(-375%);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width:768px) {
+
+    .carousel img {
+
+        width: 180px;
+
+        min-width: 180px;
+
+        height: 260px;
+    }
+}
+
 /* BUTTON */
 
 .btn {
@@ -538,11 +547,9 @@ h2{
     border-radius: 50px;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #7bc8ff,
-            #B7E3FD
-        );
+            #B7E3FD);
 
     color: white;
 
@@ -558,8 +565,7 @@ h2{
 .btn:hover {
 
     transform:
-        translateY(-4px)
-        scale(1.03);
+        translateY(-4px) scale(1.03);
 }
 
 /* MUSIC */
@@ -585,7 +591,7 @@ h2{
 
     border: none;
 
-    background: rgba(255,255,255,.2);
+    background: rgba(255, 255, 255, .2);
 
     backdrop-filter: blur(10px);
 
@@ -614,7 +620,7 @@ h2{
 
     border: none;
 
-    background: rgba(255,255,255,.2);
+    background: rgba(255, 255, 255, .2);
 
     color: white;
 
@@ -742,7 +748,7 @@ footer {
     height: 100%;
 
     background:
-        rgba(0,0,0,0.72);
+        rgba(0, 0, 0, 0.72);
 
     backdrop-filter: blur(10px);
 
@@ -766,10 +772,10 @@ footer {
     max-width: 380px;
 
     background:
-        rgba(255,255,255,0.12);
+        rgba(255, 255, 255, 0.12);
 
     border:
-        1px solid rgba(255,255,255,0.15);
+        1px solid rgba(255, 255, 255, 0.15);
 
     border-radius: 30px;
 
@@ -778,7 +784,7 @@ footer {
     text-align: center;
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,0.35);
+        0 15px 40px rgba(0, 0, 0, 0.35);
 
     animation:
         welcomeFade 1s ease;
@@ -799,7 +805,7 @@ footer {
 
 .welcome-box p {
 
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
 
     margin-bottom: 35px;
 
@@ -815,11 +821,9 @@ footer {
     border-radius: 50px;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #7bc8ff,
-            #B7E3FD
-        );
+            #B7E3FD);
 
     color: white;
 
@@ -832,14 +836,13 @@ footer {
     transition: all .35s ease;
 
     box-shadow:
-        0 10px 25px rgba(123,200,255,.35);
+        0 10px 25px rgba(123, 200, 255, .35);
 }
 
 #welcomeModal button:hover {
 
     transform:
-        translateY(-4px)
-        scale(1.03);
+        translateY(-4px) scale(1.03);
 }
 
 /* Fade OUT */
@@ -860,8 +863,7 @@ footer {
         opacity: 0;
 
         transform:
-            translateY(30px)
-            scale(.95);
+            translateY(30px) scale(.95);
     }
 
     to {
@@ -869,8 +871,7 @@ footer {
         opacity: 1;
 
         transform:
-            translateY(0)
-            scale(1);
+            translateY(0) scale(1);
     }
 }
 
