@@ -5,11 +5,7 @@
     <meta charset="UTF-8">
     <title>XV Años Fernanda</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/styles.css">
 </head>
 
@@ -19,217 +15,239 @@
     <audio id="music" loop>
         <source src="source/music.mp3" type="audio/mpeg">
     </audio>
+
+    <!-- ✨ MODAL DE BIENVENIDA -->
+    <div id="welcomeModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-deco">✦</div>
+            <h2 class="modal-title">Bienvenida</h2>
+            <p class="modal-name">XV Años<br><span>Fernanda</span></p>
+            <p class="modal-text">Activa el sonido para disfrutar la experiencia completa.</p>
+            <div class="modal-buttons">
+                <button class="modal-btn primary" id="btnConSonido">🎵 Entrar con música</button>
+                <button class="modal-btn secondary" id="btnSinSonido">Entrar sin música</button>
+            </div>
+            <div class="modal-deco bottom">✦</div>
+        </div>
+    </div>
+
+    <!-- Control de música -->
     <div class="music-control">
-        <button id="musicBtn">🔊</button>
+        <button id="musicBtn" title="Música">🔊</button>
     </div>
 
-    <!-- PORTADA -->
+    <!-- Botón volver arriba -->
+    <button id="backToTop" aria-label="Volver arriba">↑</button>
+
+    <!-- ═══════════════════════════════ PORTADA ═══════════════════════════════ -->
     <section id="hero">
-        <div class="overlay">
-            <h1 style="font-weight: 400;
-  font-style: normal;">XV años Fernanda</h1>
-            <h2 style="font-family: 'Great Vibes';">24 / julio / 2026</h2>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <p class="hero-sub">Una noche para recordar</p>
+                <h1 class="hero-title">XV Años</h1>
+                <h2 class="hero-name">Fernanda Bañuelos</h2>
+                <div class="hero-divider">
+                    <span></span><span class="diamond">◆</span><span></span>
+                </div>
+                <p class="hero-date">24 · julio · 2026</p>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>◆</span>
         </div>
     </section>
 
-    <!-- MENSAJE -->
-    <section class="section white" style="padding-bottom: -20%;">
+    <!-- ═══════════════════════════════ MENSAJE ═══════════════════════════════ -->
+    <section class="section white fade-section">
         <div class="container center">
-            <h1 style="font-family: 'Great Vibes';">Fernanda Bañuelos</h1>
-            <img src="images/separador.webp" width="60%" alt="">
-            <p class="mensaje" style="color: #111;">
-                "Con la bendición de Dios y el amor de mi familia, hoy dejo atrás mis sueños de niña para comenzar a
-                escribir una nueva historia llena de ilusiones."
-                <br><br>
+            <p class="section-label">Un mensaje de corazón</p>
+            <h2 class="section-name">Fernanda Bañuelos</h2>
+            <div class="ornament">❦</div>
+            <p class="mensaje">
+                "Con la bendición de Dios y el amor de mi familia, hoy dejo atrás mis sueños de niña para comenzar a escribir una nueva historia llena de ilusiones."
             </p>
-
-            <h1 style="font-family: 'Great Vibes'; color: #B7E3FD;"><b>
-                    <div id="countdown"></div>
-                </b></h1>
+            <div class="countdown-wrapper">
+                <p class="countdown-label">Faltan</p>
+                <div id="countdown" class="countdown"></div>
+                <p class="countdown-label">para el gran día</p>
+            </div>
         </div>
     </section>
-    <div class="section">
-        <h1 style="font-family: 'Great Vibes'; color: #fff ;font-weight: 400;">Para el evento</h1>
-        <img src="images/separador2.webp" width="70%" style="margin-top: -6%; margin-bottom: 6%;" alt="">
-        <p style="color: #fff;">Agradezco tu atención para las siguientes indicaciones:</p>
-    </div>
-    <!-- VESTIMENTA -->
-    <section class="section white">
 
-        <img src="images/vestimenta.png" width="50%" alt="Decoración" style="margin-bottom: -10%;">
-        <img src="images/separador2.webp" width="60%" alt="">
-        <h1 style="font-family: 'Great Vibes'; color: #000">Código de Vestimenta</h1>
-        <p style="color: #505050;">Formal</p>
-        <p style="color: #505050;">Mujeres: Vestido largo</p>
-        <p style="color: #505050;">Hombres: Traje completo</p>
-
-
-        <p style="color: #505050;" class="highlight">Gama Azul reservada para la quinceañera</p>
+    <!-- ═══════════════════════════════ AVISO ═══════════════════════════════ -->
+    <section class="section dark fade-section">
+        <p class="section-label light">Para el evento</p>
+        <div class="ornament light">◆</div>
+        <p class="aviso-text">Agradezco tu atención para las siguientes indicaciones:</p>
     </section>
 
-    <div class="section" style="margin-top: 20%; margin-bottom: 20%;">
-        <p style="color: #fff;">
-            Acompáñame a celebrar este momento tan especial en mi vida donde cada sonrisa, cada abrazo y cada
-            instante serán recuerdos que guardaré por siempre en mi corazón.
+    <!-- ═══════════════════════════════ VESTIMENTA ═══════════════════════════════ -->
+    <section class="section white fade-section">
+        <p class="section-label">Código de Vestimenta</p>
+        <h2 class="section-name">Formal</h2>
+        <div class="dress-grid">
+            <div class="dress-card">
+                <div class="dress-icon">👗</div>
+                <p class="dress-role">Mujeres</p>
+                <p class="dress-detail">Vestido largo</p>
+            </div>
+            <div class="dress-card">
+                <div class="dress-icon">🤵</div>
+                <p class="dress-role">Hombres</p>
+                <p class="dress-detail">Traje completo</p>
+            </div>
+        </div>
+        <div class="highlight-box">
+            <span>◆</span>
+            <p>Gama de azul reservada<br>para la quinceañera</p>
+            <span>◆</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FRASE CENTRAL ═══════════════════════════════ -->
+    <section class="section dark fade-section">
+        <div class="ornament light">❦</div>
+        <p class="frase-central">
+            Acompáñame a celebrar este momento tan especial en mi vida, donde cada sonrisa, cada abrazo y cada instante serán recuerdos que guardaré por siempre en mi corazón.
         </p>
-        <img src="images/separador2.webp" width="70%" alt="">
-    </div>
-
-    <!-- ITINERARIO -->
-    <section class="section white">
-        <img src="images/separador.webp" style="width: 60%; transform: rotate(180deg); margin-top: 12%;" alt="">
-        <br>
-        <img src="images/itinerario.webp" style="width: 100%;" alt="">
-        <br>
-        <img src="images/separador.webp" style="width: 60%;" alt="">
-        <br>
+        <div class="ornament light">◆</div>
     </section>
 
-    <div class="section">
-        <h1 style="font-family: 'Great Vibes'; color: #fff;">Padres y Padrinos</h1>
-        <img src="images/separador2.png" width="60%" style="margin-top: -6%; margin-bottom: 6%;" alt="">
-        <p style="color: #fff;">"Gracias por estar a mi lado en este día especial, como lo has estado en todos los
-            grandes momentos de mi vida."</p>
-        <div class="family-slider white">
-
-            <div class="slider-track white">
-
-                <!-- PAPÁS -->
-                <div class="slide" style="margin-top: -5%;">
-                    <h2 style="font-family: 'Great Vibes'; color: #111;">Gabriela Arellano</h2>
-                    <h2 style="font-family: 'Great Vibes'; color: #111; margin: -5%;">&</h2>
-                    <h2 style="font-family: 'Great Vibes'; color: #111;">Felipe Bañuelos</h2>
-                    <p style="color: #111;">Papás</p>
+    <!-- ═══════════════════════════════ ITINERARIO ═══════════════════════════════ -->
+    <section class="section white fade-section">
+        <p class="section-label">El gran día</p>
+        <h2 class="section-name">Itinerario</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="tl-time">17:00</div>
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <p class="tl-title">Misa de XV años</p>
+                    <p class="tl-place">Parroquia de San Juan Bosco</p>
                 </div>
-
-                <!-- PADRINOS -->
-                <div class="slide white" style="margin-top: -5%;">
-                    <h2 style="font-family: 'Great Vibes'; color: #111;">Sendy Ovalle</h2>
-                    <h2 style="font-family: 'Great Vibes'; color: #111; margin: -5%;">&</h2>
-                    <h2 style="font-family: 'Great Vibes'; color: #111;">Jaime Bañuelos</h2>
-                    <p style="color: #111;">Padrinos</p>
+            </div>
+            <div class="timeline-item">
+                <div class="tl-time">19:00</div>
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                    <p class="tl-title">Recepción & Fiesta</p>
+                    <p class="tl-place">Salón Real de Las Palmas</p>
                 </div>
-
             </div>
-
         </div>
-
-    </div>
-
-    <!-- UBICACIONES -->
-    <section class="section white">
-
-        <h1 style="font-family: 'Great Vibes'; color: #000;">Ceremonia Religiosa</h1>
-        <img src="images/separador.webp" style="width: 60%; height: 30%;">
-
-        <div class="event-card">
-
-
-            <div class="event-content">
-
-                <p><strong>Lugar:</strong> Parroquia de San Juan Bosco</p>
-
-                <p>
-                    <strong>Domicilio:</strong>
-                    C. Industria 1512, San Juan Bosco,
-                    44730 Guadalajara, Jal.
-                </p>
-
-            </div>
-
-            <img src="images/iglesia.png" alt="Iglesia">
-        </div>
-
-
-
-        <iframe
-            src="https://maps.google.com/maps?q=Parroquia%20San%20Juan%20Bosco%20Guadalajara&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            style="border-radius: 10%;"></iframe>
-
-
-
-
-        <div class="event-card">
-
-            <div class="event-content">
-
-                <h1 style="font-family: 'Great Vibes'; color: #000;">Recepción</h1>
-                <img src="images/separador.png" style="width: 100%; height: 30%;">
-                <p><strong>Lugar:</strong> Salón Real de Las Palmas</p>
-
-                <p>
-                    <strong>Domicilio:</strong>
-                    Guanabana 4096, Loma de San Miguel,
-                    San Pedro Tlaquepaque.
-                </p>
-
-            </div>
-
-            <img src="images/terraza2.jpeg" alt="Salón">
-        </div>
-
-
-        <iframe
-            src="https://maps.google.com/maps?q=Real%20de%20Las%20Palmas%20Tlaquepaque&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            style="border-radius: 10%;"></iframe>
     </section>
 
-    <!-- GALERÍA -->
-    <section class="section white">
-        <h1 style="font-family: 'Great Vibes'; color: #000;">Galería</h1>.
-        <img src="images/separador.png" style="width: 60%; margin-bottom: 6%;" alt="">
+    <!-- ═══════════════════════════════ FAMILIA ═══════════════════════════════ -->
+    <section class="section dark fade-section">
+        <p class="section-label light">Con el amor de</p>
+        <h2 class="section-name light">Padres y Padrinos</h2>
+        <div class="ornament light">❦</div>
+        <p class="aviso-text">"Gracias por estar a mi lado en este día especial, como lo has estado en todos los grandes momentos de mi vida."</p>
+
+        <div class="family-slider">
+            <div class="slider-track">
+                <div class="slide">
+                    <h3>Gabriela Arellano</h3>
+                    <span class="amp">&</span>
+                    <h3>Felipe Bañuelos</h3>
+                    <p>Papás</p>
+                </div>
+                <div class="slide">
+                    <h3>Sendy Ovalle</h3>
+                    <span class="amp">&</span>
+                    <h3>Jaime Bañuelos</h3>
+                    <p>Padrinos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ UBICACIONES ═══════════════════════════════ -->
+    <section class="section white fade-section">
+        <p class="section-label">¿Dónde nos vemos?</p>
+        <h2 class="section-name">Ceremonia Religiosa</h2>
+
+        <div class="event-card">
+            <img src="images/iglesia.png" alt="Iglesia" class="event-img">
+            <div class="event-content">
+                <p class="event-place">Parroquia de San Juan Bosco</p>
+                <p class="event-address">C. Industria 1512, San Juan Bosco,<br>44730 Guadalajara, Jal.</p>
+            </div>
+        </div>
+
+        <iframe src="https://maps.google.com/maps?q=Parroquia%20San%20Juan%20Bosco%20Guadalajara&t=&z=13&ie=UTF8&iwloc=&output=embed" title="Mapa Iglesia"></iframe>
+
+        <h2 class="section-name" style="margin-top: 40px;">Recepción</h2>
+
+        <div class="event-card">
+            <img src="images/terraza2.jpeg" alt="Salón" class="event-img">
+            <div class="event-content">
+                <p class="event-place">Salón Real de Las Palmas</p>
+                <p class="event-address">Guanabana 4096, Loma de San Miguel,<br>San Pedro Tlaquepaque.</p>
+            </div>
+        </div>
+
+        <iframe src="https://maps.google.com/maps?q=Real%20de%20Las%20Palmas%20Tlaquepaque&t=&z=13&ie=UTF8&iwloc=&output=embed" title="Mapa Salón"></iframe>
+    </section>
+
+    <!-- ═══════════════════════════════ GALERÍA ═══════════════════════════════ -->
+    <section class="section white fade-section">
+        <p class="section-label">Momentos</p>
+        <h2 class="section-name">Galería</h2>
         <div class="carousel">
-            <img src="images/1.jpeg">
-            <img src="images/2.jpeg">
-            <img src="images/3.jpeg">
-            <img src="images/4.jpeg">
+            <div class="carousel-track">
+                <img src="images/1.jpeg" alt="Foto 1">
+                <img src="images/2.jpeg" alt="Foto 2">
+                <img src="images/3.jpeg" alt="Foto 3">
+                <img src="images/4.jpeg" alt="Foto 4">
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" data-idx="0"></span>
+                <span class="dot" data-idx="1"></span>
+                <span class="dot" data-idx="2"></span>
+                <span class="dot" data-idx="3"></span>
+            </div>
         </div>
     </section>
 
-    <!-- REGALOS -->
-    <section class="section">
-
-        <h1 style="font-family: 'Great Vibes'; color: #fff;">Regalos</h1>
-        <img src="images/separador2.png" width="60%" style="margin-top: -6%; margin-bottom: 6%;" alt="">
-        <p style="color: #fff; ">Tu presencia es mi mejor regalo en esta ocasión tan especial. Sin embargo, si deseas
-            hacerme un detalle, te ofrezco éstas opciones:</p>
-        <p style="color: #fff;">Lluvia de sobres o regalo a tu elección.</p>
+    <!-- ═══════════════════════════════ REGALOS ═══════════════════════════════ -->
+    <section class="section dark fade-section">
+        <p class="section-label light">Con cariño</p>
+        <h2 class="section-name light">Regalos</h2>
+        <div class="ornament light">◆</div>
+        <p class="aviso-text">Tu presencia es mi mejor regalo. Sin embargo, si deseas hacerme un detalle, te ofrezco estas opciones:</p>
+        <p class="aviso-text" style="font-weight:300; margin-top: 0;">💌 Lluvia de sobres o regalo a tu elección.</p>
     </section>
-    <div class="section">
-        <p style="color: #fff;">Será un honor contar con tu presencia en mis XV años, para compartir juntos esta noche
-            mágica e
-            inolvidable.</p>
-    </div>
-    <!-- CONFIRMACIÓN -->
-    <section class="section white">
-        <h1 style="font-family: 'Great Vibes'; color: #000;">Confirmación</h1>
-        <p style="color: #505050;">Por favor, confirma tu asistencia ingresando nombre completo del invitado antes del 1
-            de Julio.</p>
-        <a class="btn"
-            href="https://wa.me/525642420956?text=Confirmo%20mi%20asistencia%20a%20tu%20fiesta%20de%20XV%20años.%20Mi%20nombre%20es:%20"
-            target="_blank">
-            Confirmar por WhatsApp
+
+    <!-- ═══════════════════════════════ CIERRE ═══════════════════════════════ -->
+    <section class="section dark fade-section">
+        <div class="ornament light">❦</div>
+        <p class="frase-central">Será un honor contar con tu presencia en mis XV años, para compartir juntos esta noche mágica e inolvidable.</p>
+    </section>
+
+    <!-- ═══════════════════════════════ CONFIRMACIÓN ═══════════════════════════════ -->
+    <section class="section white fade-section">
+        <p class="section-label">¿Vendrás?</p>
+        <h2 class="section-name">Confirma tu asistencia</h2>
+        <p style="color:#666; font-size:14px; margin-bottom: 30px;">Por favor confirma antes del <strong>1 de julio</strong><br>indicando el nombre completo del invitado.</p>
+        <a class="btn-confirm" href="https://wa.me/525642420956?text=Confirmo%20mi%20asistencia%20a%20tu%20fiesta%20de%20XV%20años.%20Mi%20nombre%20es:%20" target="_blank">
+            💬 Confirmar por WhatsApp
         </a>
     </section>
-    <!-- BOTÓN VOLVER ARRIBA -->
-    <button id="backToTop">
-        ↑
-    </button>
 
-    <!-- FOOTER -->
-    <footer style="font-size: 12px;">
-        <p>¿Te interesa una invitación como esta? ¡Contáctame!</p>
-        <p><a href="https://wa.me/525642420956">WhatsApp</a> | <a
-                href="http://www.linkedin.com/in/jonathan-durón">LinkedIn</a>| <a
-                href="https://www.facebook.com/profile.php?id=61587708778083">Facebook</a></p>
-        <p></p>
-        <p>© Nuvantis 2026 - Todos los derechos reservados </p>
-        <p>Desarrollado por Jonathan Durón</p>
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer>
+        <p>¿Te interesa una invitación como esta?</p>
+        <div class="footer-links">
+            <a href="https://wa.me/525642420956">WhatsApp</a>
+            <span>·</span>
+            <a href="http://www.linkedin.com/in/jonathan-durón">LinkedIn</a>
+            <span>·</span>
+            <a href="https://www.facebook.com/profile.php?id=61587708778083">Facebook</a>
+        </div>
+        <p class="footer-copy">© Nuvantis 2026 · Desarrollado por Jonathan Durón</p>
     </footer>
 
     <script src="scripts/app.js"></script>
-
-
 </body>
-
 </html>
